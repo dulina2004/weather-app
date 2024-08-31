@@ -7,7 +7,7 @@
 }
 
 body {
-    background-image: url("/img/bg.jpg");
+    background-image: url("../img/bg.jpg");
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -72,7 +72,6 @@ body::before {
     position: relative;
     display: flex;
     justify-content: end;
-
 }
 
 .search {
