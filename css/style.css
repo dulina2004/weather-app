@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    color: white;
+}
+
+body {
+    background-image: url("/img/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100dvh;
+    margin: 0;
+    padding: 0;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100dvh;
+    background: rgb(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+}
+
+.card {
+    width: 300px;
+    height: 496px;
+    z-index: 1;
+    background: linear-gradient(
+        to top,
+        rgb(0, 0, 0, 0.15),
+        rgb(255, 255, 255, 0.15)
+    );
+    border-radius: 12px;
+    backdrop-filter: blur(100px);
+}
+
+.main-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+/*input*/
+.city {
+    width: 100%;
+    padding: 10px 16px;
+    border-radius: 99px;
+    border: 3px solid transparent;
+    background: rgb(0, 0, 0, 0.15);
+    outline: none;
+    font-weight: 500;
+    transition: 0.25s border;
+}
+.city::placeholder {
+    color: rgb(255, 255, 255, 0.75);
+}
+
+.city:focus {
+    border: 3px solid rgb(0, 0, 0, 0.15);
+}
+
+.input-container {
+    z-index: 1;
+    position: relative;
+    display: flex;
+    justify-content: end;
+
+}
+
+.search {
+    padding: 10px;
+    position: absolute;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+/*end input*/
