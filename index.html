@@ -12,12 +12,135 @@
     </head>
     <body>
         <div class="main-container">
-            <div class="input-container">
-                <input type="text" placeholder="Search City" class="city" />
-                <button class="search">
+          <div>
+           <div class="input-container">
+                <input type="text" id="txtCity" placeholder="Search City" class="city" size="30"/>
+                <button class="search" type="submit" id="btnSearch" onclick="findWeather()">
                     <span class="material-symbols-outlined"> search </span>
                 </button>
             </div>
+            <div class="data">
+              <div class="top">
+                  <div id="item1" class="box">
+                    <label id="city">Kaluthara</label>
+                    <label id="time">10:00</label>
+                    <label id="date">thursday,20 Aug</label>
+                  </div>
+                  <div id="item2" class="box">
+                    <div class="item2-1">
+                      <label id="celcius">24°C</label>
+                      <label id="celciusFeelLike">Feels like : 22°C</label><br>
+                      <div class="sunsetandsunrice">
+                        <div>
+                            <img src="src/card2/sunrise-white 1.png"  alt="sunrise" />
+                        </div>
+                        <div>
+                            <label>Sunrise</label><br>
+                            <label id="timeSunrise">06:37 AM</label>
+                        </div>
+                      </div>
+                      
+                      <div class="sunsetandsunrice"">
+                        <div>
+                            <img src="src/card2/sunset-white 1.png"  alt="sunset">
+                        </div>
+                        <div>
+                            <label>Sunset</label><br>
+                            <label id="timeSunset">20:37 PM</label>
+                        </div>
+
+                      </div>
+                      
+                    </div>
+                    <div class="Condition">
+                      <img src="src/card2/clear 1.png" id="imgCondition" alt="condition" />
+                      <label id="condition">Sunny</label>
+                    </div>
+                    <div class="leftPerameters">
+                      <img src="src/card2/humidity 1.png" alt="humidity" />
+                      <label id="humidity">41%</label>
+                      <label>Humidity</label>
+                      <img src="src/card2/pressure-white 1.png" alt="pressure" />
+                      <label id="pressure">997hPa</label>
+                      <label>Pressure</label>
+                    </div>
+                    <div class="rigthPerameters">
+                      <img src="src/card2/wind 1.png" alt="wind" />
+                      <label id="windSpeed">2km/h</label>
+                      <label>Wind Speed</label>
+                      <img src="src/card2/uv-white 1.png" alt="uv" />
+                      <label id="uv">4</label>
+                      <label>UV</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="bottom">
+          <div id="item3" class="box">
+            <div>
+              <label id="time1">Now</label>
+              <img src="src/01_sunny_color_w64.png" id="img1" alt="sun">
+              <label id="temp1">24°C</label>
+            </div>
+            <div>
+              <label id="time2">10AM</label>
+              <img src="src/01_sunny_color_w64.png" id="img2" alt="sun">
+              <label id="temp2">24°C</label>
+            </div>
+            <div>
+              <label id="time3">11AM</label>
+              <img src="src/01_sunny_color_w64.png" id="img3" alt="sun">
+              <label id="temp3">24°C</label>
+            </div>
+            <div>
+              <label id="time4">12AM</label>
+              <img src="src/01_sunny_color_w64.png" id="img4" alt="sun">
+              <label id="temp4">24°C</label>
+            </div>
+            <div>
+              <label id="time5">1PM</label>
+              <img src="src/01_sunny_color_w64.png" id="img5" alt="sun">
+              <label id="temp5">24°C</label>
+            </div>
+            <div>
+              <label id="time6">2PM</label>
+              <img src="src/01_sunny_color_w64.png" id="img6" alt="sun">
+              <label id="temp6">24°C</label>
+            </div>
+
+          </div>
+          <div id="item4" class="box">
+            <label id="title-item4"> 5 Days Forecast : </label>
+            <div>
+              <img src="src/01_sunny_color_w64.png" id="imgf1" alt="sun">
+              <label id="tempf1">24°C</label>
+              <label id="datef1">Friday,1 sep</label>
+            </div>
+            <div>
+              <img src="src/01_sunny_color_w64.png" id="imgf2" alt="sun">
+              <label id="tempf2">24°C</label>
+              <label id="datef2">Friday,1 sep</label>
+            </div>
+            <div>
+              <img src="src/01_sunny_color_w64.png" id="imgf3" alt="sun">
+              <label id="tempf3">24°C</label>
+              <label id="datef3">Friday,1 sep</label>
+            </div>
+            <div>
+              <img src="src/01_sunny_color_w64.png" id="imgf4" alt="sun">
+              <label id="tempf4">24°C</label>
+              <label id="datef4">Friday,1 sep</label>
+            </div>
+            <div>
+              <img src="src/01_sunny_color_w64.png" id="imgf5" alt="sun">
+              <label id="tempf5">24°C</label>
+              <label id="datef5">Friday,1 sep</label>
+            </div>
+
+          </div>
+        </div>
+            </div>
+          </div>
+ 
         </div>
         <script src="app.js"></script>
     </body>

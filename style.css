@@ -1,29 +1,37 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 * {
-    margin: 0;
-    padding: 0;
     font-family: "Poppins", sans-serif;
-    color: white;
+    color: rgb(255, 255, 255);
+}
+
+html{
+    font-size: 80%;
 }
 
 body {
-    background-image: url("../img/bg.jpg");
+    background-image: url("img/bg3.jpg");
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 100dvh;
+    height: 100%;
     margin: 0;
     padding: 0;
+    position: relative; /* Make sure the pseudo-element is positioned relative to the body */
 }
 
 body::before {
     content: "";
-    position: absolute;
+    position: fixed; /* Changed to fixed to stay in place during scrolling */
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 100dvh;
-    background: rgb(0, 0, 0, 0.15);
+    height: 100vh; /* Ensures it covers the viewport height */
+    background: rgba(0, 0, 0, 0.15);
     backdrop-filter: blur(10px);
+    z-index: 1; /* Make sure it's above other content */
+    pointer-events: none; /* Prevents interaction with the pseudo-element */
 }
+
 
 .card {
     width: 300px;
@@ -41,6 +49,14 @@ body::before {
 .main-container {
     width: 100%;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.main-container > div {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -68,10 +84,11 @@ body::before {
 }
 
 .input-container {
-    z-index: 1;
+    z-index: 100;
     position: relative;
     display: flex;
     justify-content: end;
+    padding: 1rem;
 }
 
 .search {
@@ -82,3 +99,414 @@ body::before {
     cursor: pointer;
 }
 /*end input*/
+
+.data {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.top {
+    display: flex;
+    flex-direction: row;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: row;
+}
+
+.box {
+    margin: 20px;
+    border-radius: 25px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    /* Glass effect */
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Light border for glass effect */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    background: linear-gradient(
+        to top,
+        rgba(255, 255, 255, 0.05),
+        rgba(255, 255, 255, 0.15)
+    );
+}
+
+
+.item2-1{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sunsetandsunrice {
+    display: flex;
+    flex-direction: row;
+}
+.sunsetandsunrice > div {
+    flex-direction: row;
+}
+.sunsetandsunrice > div > img {
+    width: 40px;
+    height: 40px;
+}
+
+.Condition{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.leftPerameters ,.rigthPerameters{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+
+#celcius {
+    font-weight: bold;
+    font-size: 50px;
+    color: #ffffff;
+}
+#celciusFeelLike {
+    font-weight: bold;
+    font-size: 15px;
+    color: #ffffff;
+}
+#imgCondition {
+    width: 150px;
+    height: 150px;
+}
+#city {
+    font-weight: bold;
+    font-size: 30px;
+}
+#time {
+    font-weight: bold;
+    font-size: 80px;
+}
+#date {
+    font-size: 20px;
+}
+
+#item1,
+#item4 {
+    width: 350px;
+    height: 250px;
+}
+
+#item2,
+#item3 {
+    width: 650px;
+    height: 250px;
+}
+
+#item2 {
+    flex-direction: row;
+    justify-content: space-between;
+}
+#item3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+#item3 > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+#item3 > div > img {
+    width: 50px;
+    height: 50px;
+}
+#item4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+#title-item4 {
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+}
+#item4 > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+#item4 > div > img {
+    width: 30px;
+    height: 30px;
+}
+
+/* @media (max-width: 1080px) {
+    .component {
+        margin-top: 20px;
+        gap: 20px;
+    }
+
+    .box {
+        width: 100%;
+        height: auto;
+        margin: 5px 0;
+    }
+
+    .sunsetandsunrice > div > img {
+        width: 30px;
+        height: 30px;
+    }
+    #celcius {
+        font-size: 30px;
+    }
+    #celciusFeelLike {
+        font-size: 10px;
+    }
+    #imgCondition {
+        width: 70px;
+        height: 70px;
+    }
+    #city {
+        font-size: 20px;
+    }
+    #time {
+        font-size: 60px;
+    }
+    #date {
+        font-size: 17px;
+    }
+
+    #item1,
+    #item4 {
+        width: 200px;
+        height: 200px;
+    }
+
+    #item2,
+    #item3 {
+        width: 350px;
+        height: 200px;
+    }
+    #item3 {
+        gap: 5px;
+    }
+    .box > label,
+    .box > div > label,
+    .box > div > div > label,
+    .box > div > div > div > label {
+        font-size: 12px;
+    }
+    #item3 > div {
+        gap: 20px;
+    }
+    #item3 > div > img {
+        width: 50px;
+        height: 50px;
+    }
+    #item4 {
+        gap: 1px;
+    }
+    #title-item4 {
+        font-size: 20px;
+    }
+    #item4 > div {
+        gap: 30px;
+    }
+    #item4 > div > img {
+        width: 30px;
+        height: 30px;
+    }
+    .top {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .bottom {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+    .item2-1 {
+        margin-left: 30px;
+        width: 400px;
+        padding: 5px;
+    }
+    .Condition,
+    .Condition > label {
+        margin-bottom: 10px;
+    }
+    .rigthPerameters {
+        width: 100%;
+        margin-top: 10px;
+        gap: 5px;
+    }
+    .leftPerameters {
+        width: 100%;
+        margin-top: 10px;
+        gap: 5px;
+    }
+    .rigthPerameters > img,
+    .leftPerameters > img {
+        width: 30px;
+        height: 30px;
+    }
+}
+/* Responsive styles */
+/* @media (max-width: 768px) {
+    .component {
+        margin-top: 30px;
+    }
+
+    .top,
+    .bottom {
+        flex-direction: column;
+    }
+
+    .box {
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+    }
+
+    #item1,
+    #item4 {
+        width: 100%;
+        height: 200px;
+    }
+
+    #item2,
+    #item3 {
+        width: 100%;
+        height: 200px;
+    }
+}  */
+
+@media (max-width: 480px) {
+    .component {
+        margin-top: 20px;
+        gap: 20px;
+    }
+
+    .box {
+        width: 100%;
+        height: auto;
+        margin: 5px 0;
+    }
+
+    .sunsetandsunrice > div > img {
+        width: 30px;
+        height: 30px;
+    }
+    #celcius {
+        font-size: 30px;
+    }
+    #celciusFeelLike {
+        font-size: 10px;
+    }
+    #imgCondition {
+        width: 70px;
+        height: 70px;
+    }
+    #city {
+        font-size: 20px;
+    }
+    #time {
+        font-size: 60px;
+    }
+    #date {
+        font-size: 17px;
+    }
+
+    #item1,
+    #item4 {
+        width: 350px;
+        height: 200px;
+    }
+
+    #item2,
+    #item3 {
+        width: 350px;
+        height: 200px;
+    }
+    #item3 {
+        gap: 5px;
+    }
+    .box > label,
+    .box > div > label,
+    .box > div > div > label,
+    .box > div > div > div > label {
+        font-size: 12px;
+    }
+    #item3 > div {
+        gap: 20px;
+    }
+    #item3 > div > img {
+        width: 50px;
+        height: 50px;
+    }
+    #item4 {
+        gap: 1px;
+    }
+    #title-item4 {
+        font-size: 20px;
+    }
+    #item4 > div {
+        gap: 30px;
+    }
+    #item4 > div > img {
+        width: 30px;
+        height: 30px;
+    }
+    .top {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .bottom {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .item2-1 {
+        margin-left: 30px;
+        width: 400px;
+        padding: 5px;
+    }
+    .Condition,
+    .Condition > label {
+        margin-bottom: 10px;
+    }
+    .rigthPerameters {
+        width: 100%;
+        margin-top: 10px;
+        gap: 5px;
+    }
+    .leftPerameters {
+        width: 100%;
+        margin-top: 10px;
+        gap: 5px;
+    }
+    .rigthPerameters > img,
+    .leftPerameters > img {
+        width: 30px;
+        height: 30px;
+    }
+} 
