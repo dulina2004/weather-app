@@ -25,7 +25,7 @@ body::before {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh; /* Ensures it covers the viewport height */
+    height: 100%;
     background: rgba(0, 0, 0, 0.15);
     backdrop-filter: blur(10px);
     z-index: 1; /* Make sure it's above other content */
@@ -48,7 +48,7 @@ body::before {
 
 .main-container {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -240,7 +240,6 @@ body::before {
     gap: 5px;
 }
 #title-item4 {
-    font-family: "Poppins", sans-serif;
     font-size: 30px;
     font-weight: 500;
 }
@@ -256,160 +255,20 @@ body::before {
     height: 30px;
 }
 
-/* @media (max-width: 1080px) {
-    .component {
-        margin-top: 20px;
-        gap: 20px;
-    }
-
-    .box {
-        width: 100%;
-        height: auto;
-        margin: 5px 0;
-    }
-
-    .sunsetandsunrice > div > img {
-        width: 30px;
-        height: 30px;
-    }
-    #celcius {
-        font-size: 30px;
-    }
-    #celciusFeelLike {
-        font-size: 10px;
-    }
-    #imgCondition {
-        width: 70px;
-        height: 70px;
-    }
-    #city {
-        font-size: 20px;
-    }
-    #time {
-        font-size: 60px;
-    }
-    #date {
-        font-size: 17px;
-    }
-
-    #item1,
-    #item4 {
-        width: 200px;
-        height: 200px;
-    }
-
-    #item2,
-    #item3 {
-        width: 350px;
-        height: 200px;
-    }
-    #item3 {
-        gap: 5px;
-    }
-    .box > label,
-    .box > div > label,
-    .box > div > div > label,
-    .box > div > div > div > label {
-        font-size: 12px;
-    }
-    #item3 > div {
-        gap: 20px;
-    }
-    #item3 > div > img {
-        width: 50px;
-        height: 50px;
-    }
-    #item4 {
-        gap: 1px;
-    }
-    #title-item4 {
-        font-size: 20px;
-    }
-    #item4 > div {
-        gap: 30px;
-    }
-    #item4 > div > img {
-        width: 30px;
-        height: 30px;
-    }
-    .top {
-        display: flex;
-        flex-direction: row;
-        gap: 20px;
-    }
-
-    .bottom {
-        display: flex;
-        flex-direction: row;
-        gap: 20px;
-    }
-    .item2-1 {
-        margin-left: 30px;
-        width: 400px;
-        padding: 5px;
-    }
-    .Condition,
-    .Condition > label {
-        margin-bottom: 10px;
-    }
-    .rigthPerameters {
-        width: 100%;
-        margin-top: 10px;
-        gap: 5px;
-    }
-    .leftPerameters {
-        width: 100%;
-        margin-top: 10px;
-        gap: 5px;
-    }
-    .rigthPerameters > img,
-    .leftPerameters > img {
-        width: 30px;
-        height: 30px;
-    }
-}
-/* Responsive styles */
-/* @media (max-width: 768px) {
-    .component {
-        margin-top: 30px;
-    }
-
-    .top,
-    .bottom {
-        flex-direction: column;
-    }
-
-    .box {
-        width: 100%;
-        height: auto;
-        margin: 10px 0;
-    }
-
-    #item1,
-    #item4 {
-        width: 100%;
-        height: 200px;
-    }
-
-    #item2,
-    #item3 {
-        width: 100%;
-        height: 200px;
-    }
-}  */
-
 @media (max-width: 480px) {
-    .component {
-        margin-top: 20px;
-        gap: 20px;
-    }
+body {
+    background-image: url("img/bg3.jpg");
 
+}  
+
+    .main-container{
+        height: 100%;
+    }
     .box {
         width: 100%;
         height: auto;
-        margin: 5px 0;
+        margin: 5px;
     }
-
     .sunsetandsunrice > div > img {
         width: 30px;
         height: 30px;
@@ -436,14 +295,14 @@ body::before {
 
     #item1,
     #item4 {
-        width: 350px;
-        height: 200px;
+        width: 300px;
+        height: 150px;
     }
 
     #item2,
     #item3 {
-        width: 350px;
-        height: 200px;
+        width: 300px;
+        height: 150px;
     }
     #item3 {
         gap: 5px;
@@ -452,17 +311,17 @@ body::before {
     .box > div > label,
     .box > div > div > label,
     .box > div > div > div > label {
-        font-size: 12px;
+        font-size: 8px;
     }
-    #item3 > div {
-        gap: 20px;
-    }
+
     #item3 > div > img {
-        width: 50px;
-        height: 50px;
+        width: 40px;
+        height: 40px;
     }
     #item4 {
         gap: 1px;
+        font-display: flex;
+        flex-direction: column;
     }
     #title-item4 {
         font-size: 20px;
@@ -477,13 +336,11 @@ body::before {
     .top {
         display: flex;
         flex-direction: column;
-        gap: 20px;
     }
 
     .bottom {
         display: flex;
         flex-direction: column;
-        gap: 20px;
     }
     .item2-1 {
         margin-left: 30px;
@@ -509,4 +366,9 @@ body::before {
         width: 30px;
         height: 30px;
     }
+    html{
+        font-size: 10%;
+    }
+
+    
 } 
