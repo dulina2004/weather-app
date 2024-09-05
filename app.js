@@ -161,4 +161,12 @@ function card4(data) {
             getWeatherData("Colombo");
         }
     }
+
+    async function first(){
+            const weatherData = await getWeatherData("Colombo");
+            displayWeather(weatherData);
+    }
+    first();
+
+
     fetchCurrentLocationWeather();
