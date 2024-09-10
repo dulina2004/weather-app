@@ -1,4 +1,5 @@
 // const apiKey = "fc0b2db0bfc64402b97171600242808";
+
 const apiKey = "38f6ec9c941f4f05be6145817242808";
 const city = document.getElementById("city");
 let time = document.getElementById("time");
@@ -14,6 +15,7 @@ const pressure = document.getElementById("pressure");
 const windSpeed = document.getElementById("windSpeed");
 const uv = document.getElementById("uv");
 let locations = "demo";
+const memory = navigator.deviceMemory;
 
 async function findWeather() {
     const txtCity = document.getElementById("txtCity").value;
